@@ -1,5 +1,5 @@
 import { Mail, Phone } from "lucide-react";
-import { Github, Linkedin } from "./Icons";
+import { Github, Linkedin, Instagram } from "./Icons";
 import Reveal from "./Reveal";
 
 export default function Contact() {
@@ -29,6 +29,9 @@ export default function Contact() {
           </a>
           <a href="https://www.linkedin.com/in/yusuf-özdemir-1a7150234" target="_blank" className="text-muted transition hover:text-accent">
             <Linkedin size={16} className="mr-1.5 inline text-accent" /> LinkedIn
+          </a>
+          <a href="https://instagram.com/kodvisions" target="_blank" className="text-muted transition hover:text-accent">
+            <Instagram size={16} className="mr-1.5 inline text-accent" /> Instagram
           </a>
         </div>
       </Reveal>
