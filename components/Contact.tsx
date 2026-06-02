@@ -30,7 +30,7 @@ export default function Contact() {
           <a href="https://www.linkedin.com/in/yusuf-özdemir-1a7150234" target="_blank" className="text-muted transition hover:text-accent">
             <Linkedin size={16} className="mr-1.5 inline text-accent" /> LinkedIn
           </a>
-          <a href="https://instagram.com/kodvisions" target="_blank" className="text-muted transition hover:text-accent">
+          <a href="https://www.instagram.com/kodvisions/" target="_blank" className="text-muted transition hover:text-accent">
             <Instagram size={16} className="mr-1.5 inline text-accent" /> Instagram
           </a>
         </div>

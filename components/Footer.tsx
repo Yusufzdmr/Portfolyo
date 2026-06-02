@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-line px-5 py-12 text-center text-muted">
       <a
-        href="https://instagram.com/kodvisions"
+        href="https://www.instagram.com/kodvisions/"
         target="_blank"
         className="inline-block transition hover:opacity-85"
         aria-label="KodVisions Instagram"
@@ -20,7 +20,7 @@ export default function Footer() {
       </a>
 
       <a
-        href="https://instagram.com/kodvisions"
+        href="https://www.instagram.com/kodvisions/"
         target="_blank"
         className="mt-4 inline-flex items-center gap-2 text-sm transition hover:text-accent"
       >

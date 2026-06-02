@@ -132,7 +132,7 @@ export default function Hero() {
         <div className="mt-7 flex justify-center gap-5 text-[1.4rem]">
           <a href="https://github.com/Yusufzdmr" target="_blank" className="text-muted transition hover:-translate-y-1 hover:text-accent" aria-label="GitHub"><Github /></a>
           <a href="https://www.linkedin.com/in/yusuf-özdemir-1a7150234" target="_blank" className="text-muted transition hover:-translate-y-1 hover:text-accent" aria-label="LinkedIn"><Linkedin /></a>
-          <a href="https://instagram.com/kodvisions" target="_blank" className="text-muted transition hover:-translate-y-1 hover:text-accent" aria-label="Instagram"><Instagram /></a>
+          <a href="https://www.instagram.com/kodvisions/" target="_blank" className="text-muted transition hover:-translate-y-1 hover:text-accent" aria-label="Instagram"><Instagram /></a>
           <a href="mailto:yusuffzdmrr@gmail.com" className="text-muted transition hover:-translate-y-1 hover:text-accent" aria-label="E-posta"><Mail /></a>
         </div>
       </motion.div>
