@@ -28,9 +28,18 @@ export default function Navbar() {
         scrolled ? "border-b border-line bg-bg/90" : "border-b border-transparent bg-bg/50"
       }`}
     >
-      <a href="#hero" className="flex items-center gap-2.5 font-display text-[1.05rem] font-bold">
-        <Image src="/logo.png" alt="Logo" width={30} height={30} className="h-[30px] w-[30px] object-contain" />
-        <span>Yusuf Özdemir</span>
+      <a href="#hero" className="group flex items-center gap-3 font-display font-bold">
+        <Image
+          src="/kodvisions.png"
+          alt="KodVisions"
+          width={40}
+          height={40}
+          className="h-10 w-10 rounded-xl border border-line object-cover transition group-hover:border-accent"
+        />
+        <span className="flex flex-col leading-none">
+          <span className="text-[1.02rem]">Yusuf Özdemir</span>
+          <span className="mt-0.5 text-[0.62rem] font-medium uppercase tracking-[0.18em] text-accent">KodVisions</span>
+        </span>
       </a>
 
       <button
