@@ -3,189 +3,289 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Yusuf Özdemir Kişisel Sitesi</title>
-    <!-- fonts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Yusuf Özdemir — Yazılım Mühendisi & Full Stack Web Geliştirici. .NET, JavaScript, Python ve modern web teknolojileriyle projeler.">
+    <meta name="author" content="Yusuf Özdemir">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Yusuf Özdemir — Yazılım Mühendisi">
+    <meta property="og:description" content="Full Stack Web Geliştirici · .NET · JavaScript · Python · AI">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/logo.png">
+
+    <title>Yusuf Özdemir — Yazılım Mühendisi</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&family=Zen+Kurenaido&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/logo.png">
-    <!-- css -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            font-family: 'Work Sans', Verdana, sans-serif;
-        }
-    </style>
 </head>
 
 <body>
-    <div class="info">
-        <marquee scrollamount="6">🚧 Yeni portföy sitesi geliştirme aşamasında 😃 <a href="###" _blank>✈ Portföy</a> 🚧</marquee>
-    </div>
-    <p class="detail">Teknoloji yolculuğumu ve becerilerimi gösteren web tabanlı kapsamlı bir özgeçmiş</p>
+    <!-- ===== NAV ===== -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav__brand">
+            <img src="assets/logo.png" alt="Logo"> <span>Yusuf Özdemir</span>
+        </a>
+        <button class="nav__toggle" id="navToggle" aria-label="Menü"><i class="fas fa-bars"></i></button>
+        <ul class="nav__menu" id="navMenu">
+            <li><a href="#hakkimda">Hakkımda</a></li>
+            <li><a href="#beceriler">Beceriler</a></li>
+            <li><a href="#deneyim">Deneyim</a></li>
+            <li><a href="#projeler">Projeler</a></li>
+            <li><a href="#iletisim" class="nav__cta">İletişim</a></li>
+        </ul>
+    </nav>
 
-    <!-- ===============ABOUT=============== -->
-    <header>
-        <table cellspacing="20">
-            <tr>
-                <td>
-                    <img src="images/vesikalık.jpg" alt="Profil fotoğrafı" width="100%">
-                </td>
-                <td>
-                    <h1 class="heading"><i class="far fa-user"></i> Yusuf Özdemir</h1>
-                    <p class="role">Full Stack Web Geliştiricisi Geçmişi</p>
-                    <p class="role">Web çözümleri geliştirme ve görev otomasyonu konusunda deneyimli, tutkulu bir
-                        geliştiriciyim. Şu anda AI ve alt alanlarını pratik projelerle keşfediyorum. Python,
-                        JavaScript ve web teknolojileri ile projeler geliştirdim ve teknik becerilerimi derinleştirmeye
-                        odaklandım. Hem frontend hem backend geliştirmede rahat çalışırım.</p>
-                    <p class="contact-info">
-                        <i class="fas fa-envelope"></i> yusuffzdmrr@gmail.com<br>
-                        <i class="fas fa-phone"></i> +90 5531082161<br>
-                        <i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye<br>
-                    </p>
-                </td>
-            </tr>
-        </table>
-        <hr size="3" noshade="">
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__inner reveal">
+            <div class="hero__photo">
+                <img src="images/vesikalık.jpg" alt="Yusuf Özdemir">
+            </div>
+            <p class="hero__hello">👋 Merhaba, ben</p>
+            <h1 class="hero__name">Yusuf Özdemir</h1>
+            <p class="hero__role">Yazılım Mühendisi &nbsp;·&nbsp; Full Stack Web Geliştirici</p>
+            <p class="hero__tagline">
+                .NET, JavaScript ve Python ile uçtan uca web çözümleri geliştiriyorum.
+                Şu anda yapay zekâ ve uygulamalarını gerçek projelerle keşfediyorum.
+            </p>
+            <div class="hero__cta">
+                <a href="#projeler" class="btn btn--primary"><i class="fas fa-folder-open"></i> Projelerim</a>
+                <a href="#iletisim" class="btn btn--ghost"><i class="fas fa-paper-plane"></i> İletişime Geç</a>
+            </div>
+            <div class="hero__social">
+                <a href="https://github.com/Yusufzdmr" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yusuf-özdemir-1a7150234" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:yusuffzdmrr@gmail.com" aria-label="E-posta"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <a href="#hakkimda" class="hero__scroll" aria-label="Aşağı kaydır"><i class="fas fa-chevron-down"></i></a>
     </header>
 
-    <!-- ===============MAIN=============== -->
     <main>
-        <!-- ####SKILLS#### -->
-        <fieldset>
-            <legend>
-                <h3 class="edu">Beceriler</h3>
-            </legend>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Programlama Dilleri</h4>
-                    <p>Java, JavaScript, C#, .Net</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Web Teknolojileri</h4>
-                    <p>HTML5, CSS3, Bootstrap, React.js, Wordpress</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Veritabanları</h4>
-                    <p>MySQL, MsSql</p>
-                </div>
-                <div class="skill-category">
-                    <h4>Araçlar & Frameworkler</h4>
-                    <p>Git, GitHub</p>
-                </div>
+        <!-- ===== HAKKIMDA ===== -->
+        <section class="section" id="hakkimda">
+            <div class="section__head reveal">
+                <span class="section__kicker">01</span>
+                <h2 class="section__title">Hakkımda</h2>
             </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>
-                <h3 class="edu">Eğitim</h3>
-            </legend>
-            <div class="ed">
-                <ul>
-                    <li>
-                        <h5 class="clg">İstanbul Gelişim Üniversitesi</h5>
-                        <strong class="course">Yazılım Mühendisliği | GNO: 2.78</strong>
-                        <p class="year">2021 - 2025</p>
-                        <p class="tech-stack">Algoritma Analizi, İleri Veri Madenciliği Teknikleri, İleri Veri Modelleme, Big Data Analitiği, Sosyal Ağ Analizi, Makine & Derin Öğrenme, NLP, GenAI</p>
-                    </li>
-                </ul>
-            </div>
-        </fieldset>
-
-        <fieldset>
-            <legend>
-                <h3 class="edu">İş Deneyimleri</h3>
-            </legend>
-
-            <div class="experience-item">
-                <h4 class="job-title">Yazılım Geliştiricisi Stajyeri</h4>
-                <p class="company-info">Netaş Telekomünikasyon Şirketi BDH Ofisi</p>
-                <p class="duration">Temmuz 2024 – Eylül 2025</p>
-                <p class="tech-stack"><strong>Teknolojiler:</strong> C#, .NET, MsSql, Microsoft PowerToys, Hugging Face Transformers, OpenAI API, Gemini API, PyMongo, Pydantic, JWT, RESTful API’ler</p>
-                <ul class="job-details">
-                    <li>HTML, CSS ve JavaScript kullanarak web arayüzleri geliştirdim, kullanıcı dostu ve mobil uyumlu tasarımlar oluşturdum</li>
-                    <li>.NET 8 ve MS SQL Server teknolojileriyle arka uç geliştirme çalışmaları yaptım</li>
-                    <li>KPSPublic sistemi entegrasyonu ile T.C. kimlik numarası doğrulama özelliğini ekledim</li>
-                    <li>Personel takip sistemi için çalışanların konum, mesai ve görev bilgilerini izleyen modüller geliştirdim</li>
-                    <li>Veritabanı tasarımı, sistem analizi ve uygulama geliştirme süreçlerinde ekip ile çalıştım</li>
-                    <li>Gerçek iş ortamında hata ayıklama, test etme ve yazılım dağıtımı deneyimi kazandım</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h4 class="job-title">Freelance Web Geliştirici</h4>
-                <p class="company-info">Uzaktan</p>
-                <p class="duration">2024 – Günümüz</p>
-                <p class="tech-stack"><strong>Teknolojiler:</strong> HTML, CSS, JavaScript, React (öğrenim aşamasında)</p>
-                <ul class="job-details">
-                    <li>Kişisel portföy siteleri ve tanıtım siteleri için responsive web arayüzleri tasarladım ve kodladım</li>
-                    <li>HTML/CSS/JS kullanarak modern ve mobil uyumlu tasarımlar geliştirdim</li>
-                    <li>React kütüphanesi ile SPA yapısına geçiş için çalışmalar yaptım</li>
-                </ul>
-            </div>
-
-        </fieldset>
-
-        <fieldset>
-            <legend>
-                <h3 class="edu">Projeler</h3>
-            </legend>
-
-            <div class="project-item">
-                <h4 class="project-title">Personel Takip Sistemi</h4>
-                <p class="project-info">Staj Projesi | 2024</p>
-                <p class="tech-stack"><strong>Teknolojiler:</strong> .NET 8, C#, MS SQL Server</p>
-                <p class="project-description">
-                    Hastanelerde personel giriş-çıkış ve çalışma takibini kolaylaştırmak amacıyla geliştirilmiş bir web tabanlı sistem.
+            <div class="about reveal">
+                <p>
+                    Web çözümleri geliştirme ve görev otomasyonu konusunda deneyimli, tutkulu bir yazılım
+                    geliştiriciyim. Hem <strong>frontend</strong> hem <strong>backend</strong> tarafında rahat
+                    çalışır; temiz, sürdürülebilir ve kullanıcı odaklı uygulamalar üretmeye odaklanırım.
+                    Python, JavaScript ve .NET ekosisteminde projeler geliştirdim; şu anda yapay zekâ ve
+                    alt alanlarını pratik projelerle derinleştiriyorum.
                 </p>
-                <ul class="project-highlights">
-                    <li>T.C. kimlik doğrulama sistemi (KPSPublic) entegre edildi</li>
-                    <li>Kullanıcı kayıt, giriş ve bilgi güncelleme modülleri oluşturuldu</li>
-                    <li>Yönetici paneli üzerinden çalışan takibi sağlandı</li>
-                </ul>
+                <div class="about__facts">
+                    <div class="fact"><i class="fas fa-graduation-cap"></i> Yazılım Mühendisliği</div>
+                    <div class="fact"><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</div>
+                    <div class="fact"><i class="fas fa-code-branch"></i> Full Stack</div>
+                    <div class="fact"><i class="fas fa-robot"></i> AI meraklısı</div>
+                </div>
             </div>
+        </section>
 
-            <div class="project-item">
-                <h4 class="project-title">Kişisel Portföy Sitesi</h4>
-                <p class="project-info">Kendi Girişimim | 2024</p>
-                <p class="tech-stack"><strong>Teknolojiler:</strong> HTML, CSS, JavaScript</p>
-                <p class="project-description">
-                    Yaptığım işleri, becerilerimi ve iletişim bilgilerimi sergilemek amacıyla basit ve şık bir kişisel web sitesi tasarladım.
+        <!-- ===== BECERILER ===== -->
+        <section class="section" id="beceriler">
+            <div class="section__head reveal">
+                <span class="section__kicker">02</span>
+                <h2 class="section__title">Beceriler</h2>
+            </div>
+            <div class="skills">
+                <div class="skill-card reveal">
+                    <h3><i class="fas fa-code"></i> Diller</h3>
+                    <div class="tags">
+                        <span>C#</span><span>JavaScript</span><span>Python</span><span>Java</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <h3><i class="fas fa-laptop-code"></i> Web</h3>
+                    <div class="tags">
+                        <span>.NET</span><span>Blazor</span><span>React</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>WordPress</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <h3><i class="fas fa-database"></i> Veritabanı</h3>
+                    <div class="tags">
+                        <span>MS SQL</span><span>MySQL</span><span>EF Core</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <h3><i class="fas fa-tools"></i> Araçlar & AI</h3>
+                    <div class="tags">
+                        <span>Git</span><span>GitHub</span><span>REST API</span><span>JWT</span><span>OpenAI API</span><span>Hugging Face</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DENEYIM ===== -->
+        <section class="section" id="deneyim">
+            <div class="section__head reveal">
+                <span class="section__kicker">03</span>
+                <h2 class="section__title">Deneyim & Eğitim</h2>
+            </div>
+            <div class="timeline">
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <span class="tl-date">Tem 2024 – Eyl 2025</span>
+                        <h3>Yazılım Geliştirici Stajyeri</h3>
+                        <p class="tl-org">Netaş Telekomünikasyon — BDH Ofisi</p>
+                        <ul>
+                            <li>.NET 8 ve MS SQL Server ile arka uç geliştirme</li>
+                            <li>KPSPublic entegrasyonu ile T.C. kimlik doğrulama özelliği</li>
+                            <li>Personel takip sistemi modülleri (konum, mesai, görev)</li>
+                            <li>HTML/CSS/JS ile mobil uyumlu arayüzler</li>
+                        </ul>
+                        <div class="tags tags--sm">
+                            <span>C#</span><span>.NET</span><span>MS SQL</span><span>OpenAI API</span><span>JWT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card">
+                        <span class="tl-date">2024 – Günümüz</span>
+                        <h3>Freelance Web Geliştirici</h3>
+                        <p class="tl-org">Uzaktan</p>
+                        <ul>
+                            <li>Müşteriler için responsive tanıtım ve e-ticaret siteleri</li>
+                            <li>Modern, mobil uyumlu HTML/CSS/JS arayüzleri</li>
+                            <li>React ile SPA yapısına geçiş çalışmaları</li>
+                        </ul>
+                        <div class="tags tags--sm">
+                            <span>JavaScript</span><span>React</span><span>Next.js</span><span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-dot tl-dot--edu"></div>
+                    <div class="tl-card">
+                        <span class="tl-date">2021 – 2025</span>
+                        <h3>Yazılım Mühendisliği (Lisans)</h3>
+                        <p class="tl-org">İstanbul Gelişim Üniversitesi · GNO 2.78</p>
+                        <p class="tl-desc">
+                            Algoritma Analizi, Veri Madenciliği, Big Data Analitiği, Makine & Derin Öğrenme,
+                            NLP ve Generative AI alanlarında dersler.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJELER ===== -->
+        <section class="section" id="projeler">
+            <div class="section__head reveal">
+                <span class="section__kicker">04</span>
+                <h2 class="section__title">Projeler</h2>
+                <p class="section__sub">GitHub'daki seçili çalışmalarım</p>
+            </div>
+            <div class="projects">
+                <article class="proj reveal">
+                    <div class="proj__top">
+                        <i class="fas fa-shield-halved proj__icon"></i>
+                        <a href="https://github.com/Yusufzdmr/OtpAuth" target="_blank" class="proj__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h3>OtpAuth</h3>
+                    <p>Şifresiz SMS (OTP) giriş sistemi. .NET 9 & Blazor WebAssembly, JWT, Clean Architecture, EF Core.</p>
+                    <div class="tags tags--sm"><span>.NET 9</span><span>Blazor</span><span>JWT</span></div>
+                </article>
+
+                <article class="proj reveal">
+                    <div class="proj__top">
+                        <i class="fas fa-robot proj__icon"></i>
+                        <a href="https://github.com/Yusufzdmr/ultron" target="_blank" class="proj__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h3>Ultron</h3>
+                    <p>Claude destekli sesli yapay zeka asistanı. Whisper STT, Edge TTS, araç kullanımı ve FastAPI web paneli.</p>
+                    <div class="tags tags--sm"><span>Python</span><span>Claude</span><span>FastAPI</span></div>
+                </article>
+
+                <article class="proj reveal">
+                    <div class="proj__top">
+                        <i class="fas fa-gem proj__icon"></i>
+                        <a href="https://github.com/Yusufzdmr/mi-diamond" target="_blank" class="proj__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h3>Mi Diamond</h3>
+                    <p>Mücevher e-katalog & sipariş platformu. Next.js, Supabase ve Tailwind ile yönetim panelli site.</p>
+                    <div class="tags tags--sm"><span>Next.js</span><span>Supabase</span><span>TS</span></div>
+                </article>
+
+                <article class="proj reveal">
+                    <div class="proj__top">
+                        <i class="fas fa-id-card proj__icon"></i>
+                        <a href="https://github.com/Yusufzdmr/KpsTcDogrulamaAPI" target="_blank" class="proj__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h3>KPS TC Doğrulama API</h3>
+                    <p>NVİ KPSPublic SOAP servisiyle T.C. Kimlik No doğrulayan ASP.NET Core (.NET 8) Web API.</p>
+                    <div class="tags tags--sm"><span>.NET 8</span><span>Web API</span><span>SOAP</span></div>
+                </article>
+
+                <article class="proj reveal">
+                    <div class="proj__top">
+                        <i class="fas fa-briefcase proj__icon"></i>
+                        <a href="https://github.com/Yusufzdmr/Danismanlik-Sitesi" target="_blank" class="proj__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h3>Danışmanlık Sitesi</h3>
+                    <p>Randevu + iyzico ödeme + blog + admin panelli danışmanlık web sitesi. PHP & MySQL.</p>
+                    <div class="tags tags--sm"><span>PHP</span><span>MySQL</span><span>iyzico</span></div>
+                </article>
+
+                <article class="proj reveal">
+                    <div class="proj__top">
+                        <i class="fas fa-globe proj__icon"></i>
+                        <a href="https://github.com/Yusufzdmr/Portfolyo" target="_blank" class="proj__link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h3>Portfolyo Sitesi</h3>
+                    <p>Şu an görüntülediğiniz kişisel portfolyo sitesi. Saf HTML/CSS/JS, responsive tasarım.</p>
+                    <div class="tags tags--sm"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                </article>
+            </div>
+            <div class="projects__more reveal">
+                <a href="https://github.com/Yusufzdmr" target="_blank" class="btn btn--ghost">
+                    <i class="fab fa-github"></i> Tüm projeleri GitHub'da gör
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== ILETISIM ===== -->
+        <section class="section section--contact" id="iletisim">
+            <div class="contact reveal">
+                <span class="section__kicker">05</span>
+                <h2 class="section__title">İletişime Geçelim</h2>
+                <p class="contact__text">
+                    Bir proje, iş birliği veya sadece merhaba demek için — kapım her zaman açık.
                 </p>
+                <a href="mailto:yusuffzdmrr@gmail.com" class="btn btn--primary btn--lg">
+                    <i class="fas fa-envelope"></i> yusuffzdmrr@gmail.com
+                </a>
+                <div class="contact__links">
+                    <a href="tel:+905531082161"><i class="fas fa-phone"></i> +90 553 108 21 61</a>
+                    <a href="https://github.com/Yusufzdmr" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/yusuf-özdemir-1a7150234" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
-
-        </fieldset>
-
-        <hr size="3" noshade="">
+        </section>
     </main>
 
-    <footer>
-        <div class="logo">
-            <img src="assets/logo.png" alt="logo" width="5%">
-        </div>
-        <p>Yusuf Özdemir – Yazılım Mühendisi | Yukarıdaki çalışmaları inceleyebilirsiniz</p>
-        <table class="links" cellspacing="20">
-            <tr>
-                <td><i class="far fa-paper-plane"></i><a href="mailto:yusuffzdmrr@gmail.com"> Mail</a></td>
-                <td><i class="fab fa-github"></i><a href="https://github.com/Yusufzdmr"> Github</a></td>
-                <td><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/yusuf-özdemir-1a7150234"> LinkedIn</a></td>
-            </tr>
-        </table>
-        <p>© 2025 Yusuf Özdemir</p>
-        <table>
-            <tr>
-                <td>Ziyaretçiler</td>
-                <td>
-                    <img src="https://hitwebcounter.com/counter/counter.php?page=7910499&style=0008&nbdigits=9&type=page&initCount=0"
-                        title="Ziyaretçi Sayacı" alt="web counter" border="0" />
-                </td>
-            </tr>
-        </table>
+    <footer class="footer">
+        <img src="assets/logo.png" alt="Logo" class="footer__logo">
+        <p>© <span id="year"></span> Yusuf Özdemir — Tüm hakları saklıdır.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
