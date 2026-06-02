@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink } from "lucide-react";
 import { Github } from "./Icons";
 import { projects, filters, type Category } from "@/lib/data";
 
@@ -41,6 +42,8 @@ export default function Projects() {
         <AnimatePresence mode="popLayout">
           {shown.map((p) => {
             const Icon = p.icon;
+            const isMobile = p.cats.includes("mobil");
+            const isGithub = p.href.includes("github.com");
             return (
               <motion.article
                 key={p.title}
@@ -52,28 +55,30 @@ export default function Projects() {
                 className="group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-colors hover:border-accent"
               >
                 {/* kapak */}
-                <div className="relative h-40 overflow-hidden">
+                <div className={`relative h-40 overflow-hidden ${isMobile ? "bg-gradient-to-br from-[#2a1a12] to-bg2" : ""}`}>
                   {p.image ? (
                     <Image
                       src={p.image}
                       alt={p.title}
                       fill
                       sizes="(max-width:768px) 100vw, 350px"
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      className={`transition-transform duration-500 group-hover:scale-105 ${
+                        isMobile ? "object-contain py-2" : "object-cover object-top"
+                      }`}
                     />
                   ) : (
                     <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-card2 to-bg2">
                       <Icon className="text-accent/70" size={48} />
                     </div>
                   )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                  {!isMobile && <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />}
                   <a
                     href={p.href}
                     target="_blank"
                     className="absolute right-3 top-3 rounded-full bg-bg/70 p-2 text-ink backdrop-blur transition hover:text-accent"
-                    aria-label="GitHub"
+                    aria-label={isGithub ? "GitHub" : "Siteyi aç"}
                   >
-                    <Github size={18} />
+                    {isGithub ? <Github size={18} /> : <ExternalLink size={18} />}
                   </a>
                 </div>
 

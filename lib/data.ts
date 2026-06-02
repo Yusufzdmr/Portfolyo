@@ -7,10 +7,12 @@ import {
   Banknote,
   BadgeCheck,
   Globe,
+  Smartphone,
+  Bike,
   type LucideIcon,
 } from "lucide-react";
 
-export type Category = "web" | "dotnet" | "ai" | "other";
+export type Category = "web" | "mobil" | "dotnet" | "ai" | "other";
 
 export interface Project {
   title: string;
@@ -25,12 +27,31 @@ export interface Project {
 export const filters: { key: "all" | Category; label: string }[] = [
   { key: "all", label: "Tümü" },
   { key: "web", label: "Web" },
+  { key: "mobil", label: "Mobil" },
   { key: "dotnet", label: ".NET" },
   { key: "ai", label: "AI / Python" },
   { key: "other", label: "Diğer" },
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Gidonla — Mobil Uygulama",
+    desc: "Bisiklet, motosiklet ve elektrikli araç ilan/pazaryeri uygulaması. İlan yönetimi, mesajlaşma, favoriler, push bildirim, mağaza ve OAuth giriş.",
+    icon: Smartphone,
+    cats: ["mobil"],
+    tags: ["React Native", "Expo", "TypeScript", "React Query"],
+    href: "https://gidonla.com",
+    image: "/projects/gidonla-app.png",
+  },
+  {
+    title: "Gidonla — Web Platformu",
+    desc: "gidonla.com — ilan listeleme, mağaza, kategori ve REST API içeren ikinci el bisiklet/motosiklet pazaryeri web platformu.",
+    icon: Bike,
+    cats: ["web"],
+    tags: ["Web", "REST API", "İlan Platformu"],
+    href: "https://gidonla.com",
+    image: "/projects/gidonla-web.png",
+  },
   {
     title: "OtpAuth",
     desc: "Şifresiz SMS (OTP) giriş sistemi. .NET 9 & Blazor WebAssembly, JWT, Clean Architecture, EF Core.",
@@ -157,7 +178,7 @@ export const timeline = [
 ];
 
 export const stats = [
-  { target: 8, suffix: "+", label: "Proje" },
+  { target: 10, suffix: "+", label: "Proje" },
   { target: 2, suffix: "+", label: "Yıl Deneyim" },
   { target: 12, suffix: "+", label: "Teknoloji" },
   { target: 100, suffix: "%", label: "Tutku" },
