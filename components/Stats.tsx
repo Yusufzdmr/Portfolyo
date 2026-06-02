@@ -27,7 +27,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
   return (
     <span
       ref={ref}
-      className="block bg-gradient-to-br from-accent to-[#f08a5d] bg-clip-text font-display text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold text-transparent"
+      className="block bg-gradient-to-br from-accent to-accent2 bg-clip-text font-display text-[clamp(1.6rem,4vw,2.4rem)] font-extrabold text-transparent"
     >
       {n}
       {suffix}

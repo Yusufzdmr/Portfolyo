@@ -22,7 +22,7 @@ export default function ToTop() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 12 }}
-          className="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-accent to-[#f08a5d] text-[#1a1205] shadow-[0_8px_24px_rgba(245,185,77,.3)] transition hover:brightness-110"
+          className="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent2 text-[#04130d] shadow-[0_8px_24px_rgba(16,185,129,.3)] transition hover:brightness-110"
         >
           <ArrowUp size={18} />
         </motion.a>

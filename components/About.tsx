@@ -1,11 +1,11 @@
-import { GraduationCap, MapPin, GitBranch, Bot } from "lucide-react";
+import { GraduationCap, MapPin, Server, Languages } from "lucide-react";
 import Reveal from "./Reveal";
 
 const facts = [
   { icon: GraduationCap, label: "Yazılım Mühendisliği" },
   { icon: MapPin, label: "İstanbul, Türkiye" },
-  { icon: GitBranch, label: "Full Stack" },
-  { icon: Bot, label: "AI meraklısı" },
+  { icon: Server, label: "Backend odaklı" },
+  { icon: Languages, label: "İngilizce B2" },
 ];
 
 export default function About() {
@@ -14,17 +14,18 @@ export default function About() {
       <Reveal>
         <span className="font-display text-[0.9rem] font-bold tracking-[2px] text-accent">01</span>
         <h2 className="mt-1.5 font-display text-[clamp(1.7rem,4vw,2.4rem)] font-bold">Hakkımda</h2>
-        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-[#f08a5d]" />
+        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-accent2" />
       </Reveal>
 
       <Reveal delay={0.1}>
         <p className="mt-9 max-w-[760px] text-[1.05rem] text-muted">
-          Web çözümleri geliştirme ve görev otomasyonu konusunda deneyimli, tutkulu bir yazılım
-          geliştiriciyim. Hem <strong className="text-ink">frontend</strong> hem{" "}
-          <strong className="text-ink">backend</strong> tarafında rahat çalışır; temiz,
-          sürdürülebilir ve kullanıcı odaklı uygulamalar üretmeye odaklanırım. Python, JavaScript ve
-          .NET ekosisteminde projeler geliştirdim; şu anda yapay zekâ ve alt alanlarını pratik
-          projelerle derinleştiriyorum.
+          Yazılım Mühendisliği lisans mezunu, <strong className="text-ink">PHP ve JavaScript</strong>{" "}
+          ağırlıklı <strong className="text-ink">backend</strong> geliştirme deneyimine sahip bir
+          yazılım geliştiriciyim. CRM sistemlerinde <strong className="text-ink">yapay zeka
+          entegrasyonu</strong>, SEO optimizasyonu ve Linux sunucu yönetimi alanlarında aktif
+          projelerde görev aldım; yönettiğim SEO çalışması şirket sitesini hedef kelimelerde Google
+          ilk sayfasına taşıdı. Hedefim, ölçeklenebilir backend sistemleri kuran ve veri odaklı
+          kararlarla ürün performansını iyileştiren bir geliştirici olarak çalışmak.
         </p>
         <div className="mt-7 flex flex-wrap gap-3.5">
           {facts.map((f) => (

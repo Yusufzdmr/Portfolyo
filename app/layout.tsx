@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolyo-yusufzdmr.vercel.app"),
+  metadataBase: new URL("https://yusufzdmr.github.io/Portfolyo"),
   title: "Yusuf Özdemir — Yazılım Mühendisi",
   description:
     "Yusuf Özdemir — Yazılım Mühendisi & Full Stack Web Geliştirici. .NET, JavaScript, Python ve modern web teknolojileriyle projeler.",

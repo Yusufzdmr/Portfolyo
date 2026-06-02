@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github } from "./Icons";
 import { projects, filters, type Category } from "@/lib/data";
@@ -14,7 +15,7 @@ export default function Projects() {
       <div className="mb-8">
         <span className="font-display text-[0.9rem] font-bold tracking-[2px] text-accent">04</span>
         <h2 className="mt-1.5 font-display text-[clamp(1.7rem,4vw,2.4rem)] font-bold">Projeler</h2>
-        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-[#f08a5d]" />
+        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-accent2" />
         <p className="mt-2.5 text-muted">GitHub&apos;daki çalışmalarım — kategoriye göre filtreleyin</p>
       </div>
 
@@ -26,7 +27,7 @@ export default function Projects() {
             onClick={() => setActive(f.key)}
             className={`rounded-full border px-4 py-2 text-[0.88rem] font-medium transition ${
               active === f.key
-                ? "border-transparent bg-gradient-to-br from-accent to-[#f08a5d] font-semibold text-[#1a1205]"
+                ? "border-transparent bg-gradient-to-br from-accent to-accent2 font-semibold text-[#04130d]"
                 : "border-line bg-card text-muted hover:border-accent hover:text-ink"
             }`}
           >
@@ -48,23 +49,48 @@ export default function Projects() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative overflow-hidden rounded-2xl border border-line bg-card p-6 transition-colors hover:border-accent"
+                className="group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-colors hover:border-accent"
               >
-                <span className="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-gradient-to-br from-accent to-[#f08a5d] transition-transform duration-300 group-hover:scale-x-100" />
-                <div className="mb-4 flex items-center justify-between">
-                  <Icon className="text-accent" size={30} />
-                  <a href={p.href} target="_blank" className="text-muted transition hover:-translate-y-0.5 hover:text-ink" aria-label="GitHub">
-                    <Github size={22} />
+                {/* kapak */}
+                <div className="relative h-40 overflow-hidden">
+                  {p.image ? (
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      sizes="(max-width:768px) 100vw, 350px"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-card2 to-bg2">
+                      <Icon className="text-accent/70" size={48} />
+                    </div>
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    className="absolute right-3 top-3 rounded-full bg-bg/70 p-2 text-ink backdrop-blur transition hover:text-accent"
+                    aria-label="GitHub"
+                  >
+                    <Github size={18} />
                   </a>
                 </div>
-                <h3 className="mb-2 font-display text-[1.2rem] font-bold">{p.title}</h3>
-                <p className="mb-4 text-[0.92rem] text-muted">{p.desc}</p>
-                <div className="flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span key={t} className="rounded-md border border-line bg-card2 px-2.5 py-1 text-[0.78rem] text-muted">
-                      {t}
-                    </span>
-                  ))}
+
+                {/* içerik */}
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="mb-2 flex items-center gap-2.5">
+                    <Icon className="text-accent" size={22} />
+                    <h3 className="font-display text-[1.2rem] font-bold">{p.title}</h3>
+                  </div>
+                  <p className="mb-4 flex-1 text-[0.92rem] text-muted">{p.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span key={t} className="rounded-md border border-line bg-card2 px-2.5 py-1 text-[0.78rem] text-muted">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </motion.article>
             );

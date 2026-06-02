@@ -10,13 +10,13 @@ export default function Contact() {
         <h2 className="mx-auto mt-1.5 font-display text-[clamp(1.7rem,4vw,2.4rem)] font-bold">
           İletişime Geçelim
         </h2>
-        <div className="mx-auto mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-[#f08a5d]" />
+        <div className="mx-auto mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-accent2" />
         <p className="mx-auto mt-5 max-w-[520px] text-muted">
           Bir proje, iş birliği veya sadece merhaba demek için — kapım her zaman açık.
         </p>
         <a
           href="mailto:yusuffzdmrr@gmail.com"
-          className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-accent to-[#f08a5d] px-8 py-4 text-[1.05rem] font-semibold text-[#1a1205] shadow-[0_8px_24px_rgba(245,185,77,.25)] transition hover:-translate-y-0.5 hover:brightness-105"
+          className="mt-7 inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-accent to-accent2 px-8 py-4 text-[1.05rem] font-semibold text-[#04130d] shadow-[0_8px_24px_rgba(16,185,129,.25)] transition hover:-translate-y-0.5 hover:brightness-105"
         >
           <Mail size={20} /> yusuffzdmrr@gmail.com
         </a>

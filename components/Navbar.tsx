@@ -53,7 +53,7 @@ export default function Navbar() {
         <li>
           <a
             href="#iletisim"
-            className="rounded-full bg-gradient-to-br from-accent to-[#f08a5d] px-4 py-2 text-[0.95rem] font-semibold text-[#1a1205] transition hover:brightness-110"
+            className="rounded-full bg-gradient-to-br from-accent to-accent2 px-4 py-2 text-[0.95rem] font-semibold text-[#04130d] transition hover:brightness-110"
           >
             İletişim
           </a>

@@ -19,6 +19,7 @@ export interface Project {
   cats: Category[];
   tags: string[];
   href: string;
+  image?: string;
 }
 
 export const filters: { key: "all" | Category; label: string }[] = [
@@ -37,6 +38,7 @@ export const projects: Project[] = [
     cats: ["dotnet", "web"],
     tags: [".NET 9", "Blazor", "JWT"],
     href: "https://github.com/Yusufzdmr/OtpAuth",
+    image: "/projects/otpauth.png",
   },
   {
     title: "Ultron",
@@ -69,6 +71,7 @@ export const projects: Project[] = [
     cats: ["web"],
     tags: ["PHP", "MySQL", "iyzico"],
     href: "https://github.com/Yusufzdmr/Danismanlik-Sitesi",
+    image: "/projects/danismanlik.png",
   },
   {
     title: "Banka Yönetim Sistemi",
@@ -97,46 +100,57 @@ export const projects: Project[] = [
 ];
 
 export const skills = [
-  { title: "Diller", items: ["C#", "JavaScript", "TypeScript", "Python", "Java"] },
-  { title: "Web", items: [".NET", "Blazor", "React", "Next.js", "HTML5", "CSS3", "Tailwind", "Bootstrap"] },
-  { title: "Veritabanı", items: ["MS SQL", "MySQL", "EF Core", "Supabase"] },
-  { title: "Araçlar & AI", items: ["Git", "GitHub", "REST API", "JWT", "OpenAI API", "Hugging Face"] },
+  { title: "Diller", items: ["PHP", "JavaScript", "Java", "C#", "SQL"] },
+  { title: "Backend & Mimari", items: ["MVC", "Katmanlı Mimari", "RESTful API", "CRM", "AI Entegrasyonu", ".NET", "Next.js"] },
+  { title: "Mobil & Web", items: ["Mobil Uygulama", "React", "Responsive UI", "HTML5", "CSS3", "Tailwind"] },
+  { title: "Veritabanı", items: ["PostgreSQL", "MySQL", "MS SQL", "Sorgu Optimizasyonu"] },
+  { title: "DevOps & Araçlar", items: ["Linux", "Git", "GitHub", "Postman", "VS Code", "IntelliJ IDEA"] },
 ];
 
 export const timeline = [
   {
-    date: "Tem 2024 – Eyl 2025",
-    title: "Yazılım Geliştirici Stajyeri",
-    org: "Netaş Telekomünikasyon — BDH Ofisi",
+    date: "Mart 2026 – Günümüz",
+    title: "Yazılım Uygulama ve Destek Elemanı",
+    org: "Devups Cloud",
     points: [
-      ".NET 8 ve MS SQL Server ile arka uç geliştirme",
-      "KPSPublic entegrasyonu ile T.C. kimlik doğrulama özelliği",
-      "Personel takip sistemi modülleri (konum, mesai, görev)",
-      "HTML/CSS/JS ile mobil uyumlu arayüzler",
+      "PHP tabanlı CRM sistemine yapay zeka destekli müşteri etkileşim modülleri entegre ettim",
+      "Şirket sitesinin teknik SEO çalışmalarını yönettim; hedef kelimelerde Google ilk sayfa görünürlüğü",
+      "Linux sunucu kurulumu, monitoring ve sistem takibi süreçlerini yürüttüm",
+      "CRM altyapısında yeni modül geliştirme, hata giderme ve performans iyileştirme",
     ],
-    tags: ["C#", ".NET", "MS SQL", "OpenAI API", "JWT"],
+    tags: ["PHP", "JavaScript", "SQL", "Linux", "AI Entegrasyonu", "Git"],
     kind: "work" as const,
   },
   {
-    date: "2024 – Günümüz",
-    title: "Freelance Web Geliştirici",
-    org: "Uzaktan",
+    date: "2025 – Günümüz",
+    title: "Freelance Yazılım Geliştirici",
+    org: "Bağımsız",
     points: [
-      "Müşteriler için responsive tanıtım ve e-ticaret siteleri",
-      "Modern, mobil uyumlu arayüzler",
-      "React & Next.js ile SPA çalışmaları",
+      "PHP & JavaScript ile MVC / katmanlı mimaride özelleştirilmiş web uygulamaları",
+      "Teslimler: ödeme sistemli danışmanlık platformu, ilan sitesi + mobil, kuyumculuk kataloğu, düğün salonu sitesi",
+      "PostgreSQL/SQL ile veritabanı tasarımı, indeksleme ve sorgu optimizasyonu",
+      "Responsive arayüzler ve müşteriye Git tabanlı teslimat akışı",
     ],
-    tags: ["JavaScript", "React", "Next.js", "PHP"],
+    tags: ["PHP", "JavaScript", "PostgreSQL", "MVC", "REST API"],
+    kind: "work" as const,
+  },
+  {
+    date: "Tem 2024 – Eki 2024",
+    title: "Yazılım Geliştirme Stajyeri",
+    org: "Netaş",
+    points: [
+      "Backend geliştirme görevlerinde OOP prensipleriyle aktif rol",
+      "Veritabanı tasarımı ve sorgu optimizasyonu çalışmaları",
+      "Hata giderme, test ve bakım süreçlerinde ekip üyesi",
+    ],
+    tags: ["Backend", "OOP", "SQL"],
     kind: "work" as const,
   },
   {
     date: "2021 – 2025",
     title: "Yazılım Mühendisliği (Lisans)",
-    org: "İstanbul Gelişim Üniversitesi · GNO 2.78",
-    points: [
-      "Algoritma Analizi, Veri Madenciliği, Big Data Analitiği",
-      "Makine & Derin Öğrenme, NLP, Generative AI",
-    ],
+    org: "İstanbul Gelişim Üniversitesi",
+    points: [],
     tags: [],
     kind: "edu" as const,
   },

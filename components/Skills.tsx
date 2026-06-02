@@ -1,8 +1,8 @@
-import { Code2, LaptopMinimal, Database, Wrench } from "lucide-react";
+import { Code2, LaptopMinimal, Smartphone, Database, Wrench } from "lucide-react";
 import Reveal from "./Reveal";
 import { skills } from "@/lib/data";
 
-const icons = [Code2, LaptopMinimal, Database, Wrench];
+const icons = [Code2, LaptopMinimal, Smartphone, Database, Wrench];
 
 export default function Skills() {
   return (
@@ -10,7 +10,7 @@ export default function Skills() {
       <Reveal>
         <span className="font-display text-[0.9rem] font-bold tracking-[2px] text-accent">02</span>
         <h2 className="mt-1.5 font-display text-[clamp(1.7rem,4vw,2.4rem)] font-bold">Beceriler</h2>
-        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-[#f08a5d]" />
+        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-accent2" />
       </Reveal>
 
       <div className="mt-9 grid grid-cols-[repeat(auto-fit,minmax(230px,1fr))] gap-5">
