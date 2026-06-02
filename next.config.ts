@@ -1,14 +1,14 @@
 import type { NextConfig } from "next";
 
-// GitHub Pages proje sayfası alt yolda yayınlanır: /Portfolyo
-// Üretimde (GitHub Actions) basePath uygulanır; yerelde (npm run dev) uygulanmaz.
-const isProd = process.env.NODE_ENV === "production";
-const repo = "Portfolyo";
+// basePath yalnızca GitHub Pages için gerekir (proje alt yolu: /Portfolyo).
+// GitHub Actions build'inde PAGES_BASE_PATH=/Portfolyo verilir.
+// Vercel/Netlify gibi kök dizinde yayında bu boş kalır → site kökten çalışır.
+const basePath = process.env.PAGES_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
-  output: "export", // statik HTML çıktısı (./out) — GitHub Pages için
-  basePath: isProd ? `/${repo}` : "",
-  images: { unoptimized: true }, // statik export'ta görsel optimizasyonu kapalı
+  output: "export", // statik HTML çıktısı (./out)
+  basePath,
+  images: { unoptimized: true },
   trailingSlash: true,
 };
 

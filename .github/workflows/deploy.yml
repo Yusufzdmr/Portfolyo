@@ -25,6 +25,9 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          PAGES_BASE_PATH: /Portfolyo
+          NEXT_PUBLIC_BASE_PATH: /Portfolyo
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out

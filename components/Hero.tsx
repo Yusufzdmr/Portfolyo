@@ -15,7 +15,7 @@ const ROLES = [
   "CRM & AI Entegrasyonu",
 ];
 
-const BASE = process.env.NODE_ENV === "production" ? "/Portfolyo" : "";
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 function useTyped(words: string[]) {
   const [text, setText] = useState("");
