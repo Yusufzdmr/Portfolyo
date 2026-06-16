@@ -1,3 +1,6 @@
+import CinematicIntro from "@/components/CinematicIntro";
+import Aurora from "@/components/Aurora";
+import Spotlight from "@/components/Spotlight";
 import ScrollProgress from "@/components/ScrollProgress";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -13,6 +16,12 @@ import ToTop from "@/components/ToTop";
 export default function Home() {
   return (
     <>
+      {/* sinematik atmosfer katmanları */}
+      <div className="cine-grid" />
+      <Aurora />
+      <Spotlight />
+      <CinematicIntro />
+
       <ScrollProgress />
       <Navbar />
       <Hero />
@@ -26,6 +35,9 @@ export default function Home() {
       </main>
       <Footer />
       <ToTop />
+
+      <div className="cine-vignette" />
+      <div className="cine-grain" />
     </>
   );
 }

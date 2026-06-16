@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { Github } from "./Icons";
+import TiltCard from "./TiltCard";
+import SectionHeading from "./SectionHeading";
 import { projects, filters, type Category } from "@/lib/data";
 
 export default function Projects() {
@@ -14,10 +16,11 @@ export default function Projects() {
   return (
     <section id="projeler" className="mx-auto max-w-[1080px] scroll-mt-20 px-5 py-24 sm:px-10">
       <div className="mb-8">
-        <span className="font-display text-[0.9rem] font-bold tracking-[2px] text-accent">04</span>
-        <h2 className="mt-1.5 font-display text-[clamp(1.7rem,4vw,2.4rem)] font-bold">Projeler</h2>
-        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-accent2" />
-        <p className="mt-2.5 text-muted">GitHub&apos;daki çalışmalarım — kategoriye göre filtreleyin</p>
+        <SectionHeading
+          num="04"
+          title="Projeler"
+          desc="GitHub'daki çalışmalarım — kategoriye göre filtreleyin"
+        />
       </div>
 
       {/* filtreler */}
@@ -52,8 +55,9 @@ export default function Projects() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                className="group relative flex flex-col overflow-hidden rounded-2xl border border-line bg-card transition-colors hover:border-accent"
+                style={{ perspective: 1000 }}
               >
+                <TiltCard className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-card transition-colors hover:border-accent hover:shadow-[0_20px_60px_-15px_rgba(16,185,129,0.35)]">
                 {/* kapak */}
                 <div className={`relative h-40 overflow-hidden ${isMobile ? "bg-gradient-to-br from-[#2a1a12] to-bg2" : ""}`}>
                   {p.image ? (
@@ -97,6 +101,7 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
+                </TiltCard>
               </motion.article>
             );
           })}

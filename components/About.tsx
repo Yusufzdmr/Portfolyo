@@ -1,5 +1,6 @@
 import { GraduationCap, MapPin, Server, Languages } from "lucide-react";
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 
 const facts = [
   { icon: GraduationCap, label: "Yazılım Mühendisliği" },
@@ -11,11 +12,7 @@ const facts = [
 export default function About() {
   return (
     <section id="hakkimda" className="mx-auto max-w-[1080px] scroll-mt-20 px-5 py-24 sm:px-10">
-      <Reveal>
-        <span className="font-display text-[0.9rem] font-bold tracking-[2px] text-accent">01</span>
-        <h2 className="mt-1.5 font-display text-[clamp(1.7rem,4vw,2.4rem)] font-bold">Hakkımda</h2>
-        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-accent2" />
-      </Reveal>
+      <SectionHeading num="01" title="Hakkımda" />
 
       <Reveal delay={0.1}>
         <p className="mt-9 max-w-[760px] text-[1.05rem] text-muted">

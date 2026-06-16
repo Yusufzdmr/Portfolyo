@@ -1,17 +1,14 @@
 import Reveal from "./Reveal";
+import SectionHeading from "./SectionHeading";
 import { timeline } from "@/lib/data";
 
 export default function Experience() {
   return (
     <section id="deneyim" className="mx-auto max-w-[1080px] scroll-mt-20 px-5 py-24 sm:px-10">
-      <Reveal>
-        <span className="font-display text-[0.9rem] font-bold tracking-[2px] text-accent">03</span>
-        <h2 className="mt-1.5 font-display text-[clamp(1.7rem,4vw,2.4rem)] font-bold">Deneyim &amp; Eğitim</h2>
-        <div className="mt-3.5 h-1 w-[54px] rounded bg-gradient-to-br from-accent to-accent2" />
-      </Reveal>
+      <SectionHeading num="03" title="Deneyim & Eğitim" />
 
       <div className="relative mt-9 pl-7">
-        <span className="absolute bottom-1.5 left-[7px] top-1.5 w-0.5 bg-line" />
+        <span className="absolute bottom-1.5 left-[7px] top-1.5 w-0.5 bg-gradient-to-b from-accent/60 via-line to-transparent" />
         {timeline.map((item, i) => (
           <Reveal key={item.title} delay={i * 0.08}>
             <div className="relative mb-7">
