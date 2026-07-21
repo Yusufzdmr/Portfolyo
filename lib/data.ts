@@ -51,7 +51,7 @@ export const projects: Project[] = [
     icon: CalendarClock,
     cats: ["web"],
     tags: ["Next.js", "TypeScript", "SaaS"],
-    href: "https://periyotakip.com",
+    href: "https://github.com/Yusufzdmr/inspection-platform",
   },
   {
     title: "Gidonla — Mobil Uygulama",
