@@ -9,6 +9,7 @@ import {
   Globe,
   Smartphone,
   Bike,
+  Clapperboard,
   type LucideIcon,
 } from "lucide-react";
 
@@ -34,6 +35,14 @@ export const filters: { key: "all" | Category; label: string }[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "FilmLoop",
+    desc: "Anonim film öneri platformu — keşfet, filtrele, öner, oyla, yorumla, liste oluştur ve arkadaşına anonim öneri gönder. Sinematik karanlık arayüz, ⌘K arama, Film Battle. Lighthouse: Mobil 90 / Masaüstü 99.",
+    icon: Clapperboard,
+    cats: ["web"],
+    tags: ["Next.js 16", "Supabase", "TMDB", "TypeScript"],
+    href: "https://filmloop-tr.vercel.app",
+  },
   {
     title: "Gidonla — Mobil Uygulama",
     desc: "Bisiklet, motosiklet ve elektrikli araç ilan/pazaryeri uygulaması. İlan yönetimi, mesajlaşma, favoriler, push bildirim, mağaza ve OAuth giriş.",
