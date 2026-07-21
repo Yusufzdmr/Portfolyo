@@ -50,7 +50,7 @@ export const projects: Project[] = [
     desc: "Firmalar için çok kiracılı (multi-tenant) periyodik takip ve yönetim SaaS platformu. Firma kodu + e-posta ile giriş, ilk kurulum akışı ve firma bazlı yönetim.",
     icon: CalendarClock,
     cats: ["web"],
-    tags: ["SaaS", "Çok Kiracılı", "Web"],
+    tags: ["Next.js", "TypeScript", "SaaS"],
     href: "https://periyotakip.com",
   },
   {
