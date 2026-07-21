@@ -10,6 +10,7 @@ import {
   Smartphone,
   Bike,
   Clapperboard,
+  CalendarClock,
   type LucideIcon,
 } from "lucide-react";
 
@@ -43,6 +44,14 @@ export const projects: Project[] = [
     tags: ["Next.js 16", "Supabase", "TMDB", "TypeScript"],
     href: "https://filmloop-tr.vercel.app",
     image: "/projects/filmloop.jpg",
+  },
+  {
+    title: "PeriyoTakip",
+    desc: "Firmalar için çok kiracılı (multi-tenant) periyodik takip ve yönetim SaaS platformu. Firma kodu + e-posta ile giriş, ilk kurulum akışı ve firma bazlı yönetim.",
+    icon: CalendarClock,
+    cats: ["web"],
+    tags: ["SaaS", "Çok Kiracılı", "Web"],
+    href: "https://periyotakip.com",
   },
   {
     title: "Gidonla — Mobil Uygulama",
