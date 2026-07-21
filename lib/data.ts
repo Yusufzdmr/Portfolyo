@@ -42,6 +42,7 @@ export const projects: Project[] = [
     cats: ["web"],
     tags: ["Next.js 16", "Supabase", "TMDB", "TypeScript"],
     href: "https://filmloop-tr.vercel.app",
+    image: "/projects/filmloop.jpg",
   },
   {
     title: "Gidonla — Mobil Uygulama",
