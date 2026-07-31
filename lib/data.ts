@@ -11,6 +11,8 @@ import {
   Bike,
   Clapperboard,
   CalendarClock,
+  Building2,
+  HardHat,
   type LucideIcon,
 } from "lucide-react";
 
@@ -52,6 +54,30 @@ export const projects: Project[] = [
     cats: ["web"],
     tags: ["Next.js", "TypeScript", "SaaS"],
     href: "https://github.com/Yusufzdmr/inspection-platform",
+  },
+  {
+    title: "TeknikMüteahhit — Web Sitesi",
+    desc: "Müteahhitlik firması için kurumsal web sitesi: proje vitrini, hizmet sayfaları, referans galerisi ve iletişim / teklif formu.",
+    icon: Building2,
+    cats: ["web"],
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    href: "https://teknikmuteahhit.com/",
+  },
+  {
+    title: "TeknikMüteahhit — Mobil Uygulama",
+    desc: "Şantiye ve proje takibi için mobil uygulama: proje ilerlemesi, foto/döküman paylaşımı, müşteri iletişimi ve push bildirim.",
+    icon: HardHat,
+    cats: ["mobil"],
+    tags: ["React Native", "Expo", "TypeScript"],
+    href: "https://teknikmuteahhit.com/",
+  },
+  {
+    title: "Kahyaoğlu İnşaat",
+    desc: "1980'den beri İstanbul'da faaliyet gösteren inşaat firması için kurumsal site — kentsel dönüşüm, kat karşılığı, anahtar teslim proje sayfaları ve iletişim.",
+    icon: Building2,
+    cats: ["web"],
+    tags: ["Web", "Kurumsal", "SEO"],
+    href: "https://www.kahyaogluinsaat.com/",
   },
   {
     title: "Gidonla — Mobil Uygulama",
