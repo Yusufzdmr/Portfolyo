@@ -9,10 +9,17 @@ import {
   Globe,
   Smartphone,
   Bike,
+<<<<<<< HEAD
   HardHat,
   ClipboardCheck,
   Network,
   Wand2,
+=======
+  Clapperboard,
+  CalendarClock,
+  Building2,
+  HardHat,
+>>>>>>> 38226fad2a1853798b8d2016c07a1e4818f1bc1b
   type LucideIcon,
 } from "lucide-react";
 
@@ -40,6 +47,7 @@ export const filters: { key: "all" | Category; label: string }[] = [
 
 export const projects: Project[] = [
   {
+<<<<<<< HEAD
     title: "Teknik Müteahhit",
     desc: "İnşaat sektörüne özel bilgi platformu — forum, bilgi merkezi, sektör haberleri, hesaplama araçları ve firma rehberi. Hazır tema kullanılmadan sıfırdan geliştirildi.",
     icon: HardHat,
@@ -68,6 +76,47 @@ export const projects: Project[] = [
     cats: ["ai"],
     tags: ["Node.js", "ComfyUI", "Stable Diffusion", "REST API"],
     href: "https://github.com/Yusufzdmr/comfyui-product-photo-api",
+=======
+    title: "FilmLoop",
+    desc: "Anonim film öneri platformu — keşfet, filtrele, öner, oyla, yorumla, liste oluştur ve arkadaşına anonim öneri gönder. Sinematik karanlık arayüz, ⌘K arama, Film Battle. Lighthouse: Mobil 90 / Masaüstü 99.",
+    icon: Clapperboard,
+    cats: ["web"],
+    tags: ["Next.js 16", "Supabase", "TMDB", "TypeScript"],
+    href: "https://filmloop-tr.vercel.app",
+    image: "/projects/filmloop.jpg",
+  },
+  {
+    title: "PeriyoTakip",
+    desc: "Firmalar için çok kiracılı (multi-tenant) periyodik takip ve yönetim SaaS platformu. Firma kodu + e-posta ile giriş, ilk kurulum akışı ve firma bazlı yönetim.",
+    icon: CalendarClock,
+    cats: ["web"],
+    tags: ["Next.js", "TypeScript", "SaaS"],
+    href: "https://github.com/Yusufzdmr/inspection-platform",
+  },
+  {
+    title: "TeknikMüteahhit — Web Sitesi",
+    desc: "Müteahhitlik firması için kurumsal web sitesi: proje vitrini, hizmet sayfaları, referans galerisi ve iletişim / teklif formu.",
+    icon: Building2,
+    cats: ["web"],
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    href: "https://teknikmuteahhit.com/",
+  },
+  {
+    title: "TeknikMüteahhit — Mobil Uygulama",
+    desc: "Şantiye ve proje takibi için mobil uygulama: proje ilerlemesi, foto/döküman paylaşımı, müşteri iletişimi ve push bildirim.",
+    icon: HardHat,
+    cats: ["mobil"],
+    tags: ["React Native", "Expo", "TypeScript"],
+    href: "https://teknikmuteahhit.com/",
+  },
+  {
+    title: "Kahyaoğlu İnşaat",
+    desc: "1980'den beri İstanbul'da faaliyet gösteren inşaat firması için kurumsal site — kentsel dönüşüm, kat karşılığı, anahtar teslim proje sayfaları ve iletişim.",
+    icon: Building2,
+    cats: ["web"],
+    tags: ["Web", "Kurumsal", "SEO"],
+    href: "https://www.kahyaogluinsaat.com/",
+>>>>>>> 38226fad2a1853798b8d2016c07a1e4818f1bc1b
   },
   {
     title: "Gidonla — Mobil Uygulama",
