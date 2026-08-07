@@ -6,6 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Mail, FolderOpen, Send, ChevronDown, Download } from "lucide-react";
 import { Github, Linkedin, Instagram } from "./Icons";
 import Magnetic from "./Magnetic";
+import HeroScene from "./HeroScene";
 
 const ROLES = [
   "Yazılım Geliştirici",
@@ -65,6 +66,8 @@ export default function Hero() {
       id="hero"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-5 pb-20 pt-32 text-center"
     >
+      <HeroScene />
+
       <motion.div className="relative max-w-[820px]" style={{ y, opacity, scale }}>
         {/* profil */}
         <motion.div
@@ -110,7 +113,7 @@ export default function Hero() {
         </motion.span>
 
         {/* isim — kelime kelime maskeyle yükselir */}
-        <h1 className="font-display text-[clamp(2.6rem,8vw,5rem)] font-extrabold leading-[1.05]">
+        <h1 className="font-display text-[clamp(3rem,11vw,6.5rem)] font-extrabold leading-[0.98] tracking-[-0.02em]">
           {NAME.map((word, wi) => (
             <span key={word} className="mx-[0.12em] inline-block overflow-hidden align-bottom">
               <motion.span

@@ -46,7 +46,7 @@ export default function Projects() {
           {shown.map((p) => {
             const Icon = p.icon;
             const isMobile = p.cats.includes("mobil");
-            const isGithub = p.href.includes("github.com");
+            const isGithub = p.href?.includes("github.com") ?? false;
             return (
               <motion.article
                 key={p.title}
@@ -76,14 +76,23 @@ export default function Projects() {
                     </div>
                   )}
                   {!isMobile && <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />}
-                  <a
-                    href={p.href}
-                    target="_blank"
-                    className="absolute right-3 top-3 rounded-full bg-bg/70 p-2 text-ink backdrop-blur transition hover:text-accent"
-                    aria-label={isGithub ? "GitHub" : "Siteyi aç"}
-                  >
-                    {isGithub ? <Github size={18} /> : <ExternalLink size={18} />}
-                  </a>
+                  {p.href ? (
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      className="absolute right-3 top-3 rounded-full bg-bg/70 p-2 text-ink backdrop-blur transition hover:text-accent"
+                      aria-label={isGithub ? "GitHub" : "Siteyi aç"}
+                    >
+                      {isGithub ? <Github size={18} /> : <ExternalLink size={18} />}
+                    </a>
+                  ) : (
+                    <span
+                      className="absolute right-3 top-3 rounded-full bg-bg/70 px-2.5 py-1 text-[0.72rem] font-medium text-muted backdrop-blur"
+                      title="Kaynak kodu gizli — kurumsal proje"
+                    >
+                      Özel proje
+                    </span>
+                  )}
                 </div>
 
                 {/* içerik */}

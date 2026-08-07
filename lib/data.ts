@@ -9,6 +9,10 @@ import {
   Globe,
   Smartphone,
   Bike,
+  HardHat,
+  ClipboardCheck,
+  Network,
+  Wand2,
   type LucideIcon,
 } from "lucide-react";
 
@@ -20,7 +24,8 @@ export interface Project {
   icon: LucideIcon;
   cats: Category[];
   tags: string[];
-  href: string;
+  /** Depo gizliyse ve canlı adres yoksa boş bırakılır — kart linksiz gösterilir. */
+  href?: string;
   image?: string;
 }
 
@@ -34,6 +39,36 @@ export const filters: { key: "all" | Category; label: string }[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "Teknik Müteahhit",
+    desc: "İnşaat sektörüne özel bilgi platformu — forum, bilgi merkezi, sektör haberleri, hesaplama araçları ve firma rehberi. Hazır tema kullanılmadan sıfırdan geliştirildi.",
+    icon: HardHat,
+    cats: ["web"],
+    tags: ["Next.js 16", "Prisma", "Postgres", "Discourse SSO"],
+    href: "https://teknikmuteahhit.com",
+  },
+  {
+    title: "PeriyodiX — Periyodik Kontrol Platformu",
+    desc: "Elektrik, topraklama, yıldırımdan korunma ve yangın algılama kontrollerini yöneten çok kiracılı, offline-first SaaS. Mühendislik hesapları ve uygunluk değerlendirmesi üretir.",
+    icon: ClipboardCheck,
+    cats: ["web"],
+    tags: ["NestJS", "PostgreSQL", "RabbitMQ", "Mikroservis"],
+  },
+  {
+    title: "API Gateway",
+    desc: "API monetizasyonu için hibrit ağ geçidi. YARP reverse proxy ile yönlendirme, API anahtarı doğrulama, dağıtık rate limiting, kota takibi ve abonelik yönetimi.",
+    icon: Network,
+    cats: ["dotnet"],
+    tags: [".NET 10", "YARP", "Rate Limiting", "Redis"],
+  },
+  {
+    title: "ComfyUI Ürün Fotoğrafı API",
+    desc: "ComfyUI'ı API + WebSocket üzerinden süren Node.js orkestrasyon servisi. E-ticaret görselleri için arka plan temizleme, stüdyo arka planı ve upscale pipeline'ı.",
+    icon: Wand2,
+    cats: ["ai"],
+    tags: ["Node.js", "ComfyUI", "Stable Diffusion", "REST API"],
+    href: "https://github.com/Yusufzdmr/comfyui-product-photo-api",
+  },
   {
     title: "Gidonla — Mobil Uygulama",
     desc: "Bisiklet, motosiklet ve elektrikli araç ilan/pazaryeri uygulaması. İlan yönetimi, mesajlaşma, favoriler, push bildirim, mağaza ve OAuth giriş.",
@@ -178,7 +213,7 @@ export const timeline = [
 ];
 
 export const stats = [
-  { target: 10, suffix: "+", label: "Proje" },
+  { target: 14, suffix: "+", label: "Proje" },
   { target: 2, suffix: "+", label: "Yıl Deneyim" },
   { target: 12, suffix: "+", label: "Teknoloji" },
   { target: 100, suffix: "%", label: "Tutku" },

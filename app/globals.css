@@ -19,6 +19,31 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ---- Lenis akıcı kaydırma ---- */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ---- Özel imleç: işaretçili cihazlarda yerel imleci gizle ---- */
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button,
+  [data-cursor="hover"] {
+    cursor: none;
+  }
+}
+
 body {
   background-color: var(--color-bg);
   color: var(--color-ink);
